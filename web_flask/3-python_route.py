@@ -16,7 +16,7 @@ def index():
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
     """returns HBNB!"""
-    return 'HBNB!'
+    return 'HBNB'
 
 
 @app.route('/c/<text>', strict_slashes=False)
@@ -25,9 +25,9 @@ def cisfun(text):
     return 'C ' + text.replace('_', ' ')
 
 
-@app.route('/python', strict_slashes=False)
+@app.route('/python/', strict_slashes=False, defaults={'text':'is cool'})
 @app.route('/python/<text>', strict_slashes=False)
-def pythoniscool(text='is cool'):
+def index_python(text):
     """display "python " followed by the value of the text variable"""
     return 'python ' + text.replace('_', ' ')
 
