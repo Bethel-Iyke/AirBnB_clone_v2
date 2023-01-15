@@ -29,7 +29,8 @@ def cisfun(text):
 @app.route('/python/<text>', strict_slashes=False)
 def index_python(text):
     """display "python " followed by the value of the text variable"""
-    return 'python ' + text.replace('_', ' ')
+    text = text.replace("_"," ")
+    return "python {}".format(text)
 
 
 if __name__ == '__main__':
