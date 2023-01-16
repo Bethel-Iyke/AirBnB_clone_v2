@@ -30,7 +30,7 @@ def cisfun(text):
 def index_python(text):
     """display "python " followed by the value of the text variable"""
     text = text.replace("_"," ")
-    return "python {}".format(text)
+    return "Python {}".format(text)
 
 
 if __name__ == '__main__':
