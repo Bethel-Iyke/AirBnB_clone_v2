@@ -25,11 +25,11 @@ def cisfun(text):
     return 'C ' + text.replace('_', ' ')
 
 
-@app.route('/python/', strict_slashes=False, defaults={'text':'is cool'})
+@app.route('/python/', strict_slashes=False, defaults={'text': 'is cool'})
 @app.route('/python/<text>', strict_slashes=False)
 def index_python(text):
     """display "python " followed by the value of the text variable"""
-    text = text.replace("_"," ")
+    text = text.replace("_", " ")
     return "Python {}".format(text)
 
 
